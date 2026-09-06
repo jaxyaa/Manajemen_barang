@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Manajemen Barang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loginView" class="login-wrap">
+      <div class="login-card">
+        <div class="brand-mark">MB</div>
+        <h1>Manajemen Barang</h1>
+        <div class="role-tabs"><button class="role-tab active" data-role="admin">Admin</button><button class="role-tab" data-role="user">User</button></div>
+        <form id="loginForm">
+          <label>Email<input id="email" type="email" required /></label><label>Password<input id="password" type="password" required /></label><button class="primary full">Masuk</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="appView" class="app hidden">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark small">MB</span><span>Manajemen<br />Barang</span>
+        </div>
+        <div class="side-label">MENU UTAMA</div>
+        <nav id="nav"></nav>
+        <div class="sidebar-bottom">
+          <div class="user-chip">
+            <div class="avatar" id="avatar">A</div>
+            <div><b id="currentName"></b><small id="currentRole"></small></div>
+          </div>
+          <button id="logoutBtn" class="logout">↪ Keluar</button>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow">Selamat datang</div>
+            <h2 id="pageTitle"></h2>
+          </div>
+          <div class="top-actions"><span id="today"></span></div>
+        </header>
+        <section id="content"></section>
+      </main>
+    </div>
+    <div id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
